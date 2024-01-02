@@ -12,7 +12,7 @@
 
     <groupId>com.alibaba.spring</groupId>
     <artifactId>spring-context-support</artifactId>
-    <version>5.3.31.nacos</version>
+    <version>5.3.31.a</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -67,6 +67,20 @@
     </dependencies>
 
     <profiles>
+        <profile>
+            <id>rdc</id>
+            <distributionManagement>
+                <repository>
+                    <id>rdc-releases</id>
+                    <url>https://packages.aliyun.com/maven/repository/2001275-release-LNOerM/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>rdc-snapshots</id>
+                    <url>https://packages.aliyun.com/maven/repository/2001275-snapshot-a4bJHX/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+
         <profile>
             <id>release</id>
             <build>
